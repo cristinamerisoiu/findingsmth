@@ -1,6 +1,6 @@
 import React from "react";
 function Markets() {
-  return <div>Markets</div>;
+  return <div className="market">Markets</div>;
 }
 
 export default Markets;
