@@ -2,8 +2,10 @@ import React from "react";
 import Filter from "./Filter";
 function FilterList() {
   return (
-    <div>
-      FilterList <Filter />
+    <div className="FilterList">
+      <button className="badges">Price</button>
+      <button className="badges">Distance</button>
+      <button className="badges">Specialities</button>
     </div>
   );
 }
