@@ -37,19 +37,18 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background: #f4f1bb;
 }
 
 .MarketList {
   display: flex;
   width: 100%;
-
   flex-wrap: wrap;
-
   justify-content: space-around;
 }
 
 .badges {
-  background: yellowgreen;
+  background: #9bc1bc;
   border-radius: 3px;
 }
 .market {
@@ -60,4 +59,11 @@
   margin: 15px;
   height: 45vh;
   width: 500px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+.img__market {
+  height: 100px;
+  margin: 10px;
 }

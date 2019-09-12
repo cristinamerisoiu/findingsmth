@@ -1,11 +1,13 @@
 import React from "react";
 import Filter from "./Filter";
+import { filter } from "../api/filter";
+
 function FilterList() {
   return (
     <div className="FilterList">
-      <button className="badges">Price</button>
-      <button className="badges">Distance</button>
-      <button className="badges">Specialities</button>
+      {filter.map(filter => {
+        return <Filter key={filter.name} filter={filter} />;
+      })}
     </div>
   );
 }
