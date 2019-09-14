@@ -33,7 +33,7 @@
 
 .FilterList {
   width: 100%;
-  height: 25px;
+  height: 40px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -62,8 +62,30 @@
   border-radius: 10px;
   box-shadow: 10px 10px 8px #888888;
 }
+.filter {
+  background: rgb(218, 218, 224);
+}
 
 .img__market {
-  height: 100px;
+  height: 200px;
   margin: 10px;
+}
+.card__category {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.market__title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.market__description {
+  text-decoration: underline;
+  font-size: 15px;
+  margin-right: 20px;
+  color: antiquewhite;
+}
+.market__prop {
+  color: antiquewhite;
 }
