@@ -64,12 +64,19 @@
 }
 .filter {
   background: rgb(218, 218, 224);
+  font-size: 15px;
 }
 
 .img__market {
   height: 200px;
   margin: 10px;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  .img__market {
+    height: 120px;
+  }
+}
+
 .card__category {
   margin-right: 10px;
   font-weight: bold;
@@ -85,7 +92,19 @@
   font-size: 15px;
   margin-right: 20px;
   color: antiquewhite;
+  font-weight: bold;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .market__description {
+    padding: 0;
+  }
 }
 .market__prop {
   color: antiquewhite;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .market__prop {
+    padding: 0;
+  }
 }
