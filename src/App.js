@@ -6,11 +6,14 @@ import Header from "./components/Header";
 import MarketsList from "./components/MarketsList";
 
 function App() {
+  function handleFilterChange(name, value) {
+    console.log(`${name}: ${value}`);
+  }
   return (
     <div className="App">
       <Header />
       <main className="main">
-        <FilterList />
+        <FilterList onFilterChange={handleFilterChange} />
         <MarketsList />
       </main>
     </div>
