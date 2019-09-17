@@ -21,13 +21,15 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Header />
-      <main className="main">
-        <FilterList onFilterChange={handleFilterChange} />
-        <MarketsList selectedFilters={filters} />
-      </main>
-    </div>
+    <>
+      <div className="App">
+        <Header />
+        <main className="main">
+          <FilterList onFilterChange={handleFilterChange} />
+          <MarketsList selectedFilters={filters} />
+        </main>
+      </div>
+    </>
   );
 }
 
