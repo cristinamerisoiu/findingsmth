@@ -5,7 +5,7 @@ export const markets = [
     title: "Tanzbrunnen",
     categories: ["seafood", "fish"],
     distance: 2,
-    rating: 3.9,
+    rating: 3.0,
     description: "Best for fresh fish and sushi"
   },
   {

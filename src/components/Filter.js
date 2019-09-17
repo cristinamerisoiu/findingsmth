@@ -10,7 +10,7 @@ function Filter(props) {
     >
       <option className="badges">{props.filter.name}</option>
       {props.filter.options.map(singleFilter => {
-        return <option key={singleFilter.option}>{singleFilter}</option>;
+        return <option key={singleFilter}>{singleFilter}</option>;
       })}
     </select>
   );

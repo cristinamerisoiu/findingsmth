@@ -9,9 +9,9 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
   width: 100vw;
+  height: 100vh;
 }
 
 .header__page {
@@ -107,4 +107,8 @@
   .market__prop {
     padding: 0;
   }
+}
+
+#root {
+  background: lightblue;
 }

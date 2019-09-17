@@ -6,15 +6,26 @@ import Header from "./components/Header";
 import MarketsList from "./components/MarketsList";
 
 function App() {
+  const [filters, setFilters] = React.useState({});
+
   function handleFilterChange(name, value) {
-    console.log(`${name}: ${value}`);
+    //const newFilter = {
+    //name: name,
+    //value: value
+    //};
+
+    const newFilters = { ...filters }; // or Object.assign({}, filters)
+    newFilters[name] = value;
+    setFilters(newFilters);
+    //setFilters(newFilter);
   }
+
   return (
     <div className="App">
       <Header />
       <main className="main">
         <FilterList onFilterChange={handleFilterChange} />
-        <MarketsList />
+        <MarketsList selectedFilters={filters} />
       </main>
     </div>
   );
