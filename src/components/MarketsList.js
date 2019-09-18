@@ -1,6 +1,14 @@
 import React from "react";
 import Markets from "./Markets";
 import { markets } from "../api/markets";
+import styled from "styled-components";
+
+const MarketsListContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+`;
 
 function MarketsList({ selectedFilters }) {
   console.log(selectedFilters);
@@ -57,11 +65,11 @@ function MarketsList({ selectedFilters }) {
   });
 
   return (
-    <div className="MarketList">
+    <MarketsListContainer>
       {filteredMarkets.map(markets => {
         return <Markets key={markets.title} markets={markets} />;
       })}
-    </div>
+    </MarketsListContainer>
   );
 }
 

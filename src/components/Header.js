@@ -1,10 +1,21 @@
 import React from "react";
-function Header() {
+import styled from "styled-components";
+
+const Header = styled.header`
+  display: flex;
+  background: lightcoral;
+  padding: 20px;
+  width: 100%;
+  height: 80px;
+  justify-content: center;
+`;
+
+function Title() {
   return (
-    <div className="header__page">
+    <Header>
       <h3>around__markets</h3>
-    </div>
+    </Header>
   );
 }
 
-export default Header;
+export default Title;
