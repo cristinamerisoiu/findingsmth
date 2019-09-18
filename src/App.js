@@ -6,26 +6,36 @@ import Header from "./components/Header";
 import MarketsList from "./components/MarketsList";
 
 function App() {
-  const [filters, setFilters] = React.useState({});
+  const [filters, setFilters] = React.useState({
+    distance: "< 1min"
+  });
 
   function handleFilterChange(name, value) {
-    //const newFilter = {
-    //name: name,
-    //value: value
-    //};
-
-    const newFilters = { ...filters }; // or Object.assign({}, filters)
-    newFilters[name] = value;
+    const newFilters = { ...filters };
+    if (value) {
+      newFilters[name] = value;
+    } else {
+      delete newFilters[name];
+    }
     setFilters(newFilters);
-    //setFilters(newFilter);
   }
+  //const newFilter = {
+  //name: name,
+  //value: value
+  //};
+
+  // or Object.assign({}, filters)
+  //setFilters(newFilter);
 
   return (
     <>
       <div className="App">
         <Header />
         <main className="main">
-          <FilterList onFilterChange={handleFilterChange} />
+          <FilterList
+            selectedFilters={filters}
+            onFilterChange={handleFilterChange}
+          />
           <MarketsList selectedFilters={filters} />
         </main>
       </div>
