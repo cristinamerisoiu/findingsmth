@@ -1,10 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 import Filter from "./Filter";
 import { filter } from "../api/filter";
 
-function FilterList({ onFilterChange, selectedFilters }) {
+const Div = styled.div`
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #f4f1bb;
+`;
+
+function FilterSelection({ onFilterChange, selectedFilters }) {
   return (
-    <div className="FilterList">
+    <Div>
       {filter.map(filter => {
         return (
           <Filter
@@ -15,8 +25,8 @@ function FilterList({ onFilterChange, selectedFilters }) {
           />
         );
       })}
-    </div>
+    </Div>
   );
 }
 
-export default FilterList;
+export default FilterSelection;

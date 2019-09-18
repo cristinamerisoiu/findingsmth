@@ -1,9 +1,28 @@
 import React from "react";
 import "./App.css";
 import FilterList from "./components/FilterList";
-import Header from "./components/Header";
+import Title from "./components/Header";
 // import Markets from "./components/Markets";
 import MarketsList from "./components/MarketsList";
+import styled from "styled-components";
+
+const StyledApp = styled.div`
+  background: lightblue;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+`;
+
+const Main = styled.main`
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
 function App() {
   const [filters, setFilters] = React.useState({
@@ -29,16 +48,16 @@ function App() {
 
   return (
     <>
-      <div className="App">
-        <Header />
-        <main className="main">
+      <StyledApp>
+        <Title />
+        <Main>
           <FilterList
             selectedFilters={filters}
             onFilterChange={handleFilterChange}
           />
           <MarketsList selectedFilters={filters} />
-        </main>
-      </div>
+        </Main>
+      </StyledApp>
     </>
   );
 }
