@@ -3,7 +3,6 @@ import FilterList from "../components/FilterList";
 import MarketsList from "../components/MarketsList";
 import Title from "../components/Header";
 import styled from "styled-components";
-import { URLSearchParams } from "url";
 
 const Main = styled.main`
   flex-grow: 1;
@@ -13,10 +12,10 @@ const Main = styled.main`
   align-items: center;
 `;
 
-export default function Home({ location }) {
+export default function Home({ location, history }) {
   const params = new URLSearchParams(location.search);
   const [filters, setFilters] = React.useState({
-    category: params.get("category"),
+    category: params.get("categories"),
     distance: params.get("distance"),
     rating: params.get("rating")
   });
@@ -29,6 +28,7 @@ export default function Home({ location }) {
       delete newFilters[name];
     }
     setFilters(newFilters);
+    history.push(`/category=seafood`);
   }
 
   return (

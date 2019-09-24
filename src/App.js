@@ -1,10 +1,12 @@
 import React from "react";
 import "./App.css";
 // import Markets from "./components/Markets";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import New from "./pages/New";
+import darkTheme from "./themes/Default";
+import lightTheme from "./themes/lightTheme";
 
 const StyledApp = styled.div`
   background: lightblue;
@@ -13,6 +15,7 @@ const StyledApp = styled.div`
   flex-direction: column;
   align-items: center;
   height: 100%;
+  background-color: ${props => props.theme.background};
 `;
 
 //const newFilter = {
@@ -25,12 +28,14 @@ const StyledApp = styled.div`
 function App() {
   return (
     <>
-      <StyledApp>
-        <Router>
-          <Route path="/" exact component={Home} />
-          <Route path="/new" exact component={New} />
-        </Router>
-      </StyledApp>
+      <ThemeProvider theme={darkTheme} lightTheme={lightTheme}>
+        <StyledApp>
+          <Router>
+            <Route path="/" exact component={Home} />
+            <Route path="/new" exact component={New} />
+          </Router>
+        </StyledApp>
+      </ThemeProvider>
     </>
   );
 }
