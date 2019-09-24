@@ -53,11 +53,7 @@ function Markets(props) {
   return (
     <MarketDescription>
       <MarketTitle>{props.markets.title}</MarketTitle>
-      <ImageMarket
-        src={props.markets.imgSrc}
-        className="img__market"
-        alt={props.markets.title}
-      />
+      <ImageMarket src={props.markets.imgSrc} alt={props.markets.title} />
       <MarketProperties>{props.markets.description}</MarketProperties>
       <MarketProps>
         {" "}

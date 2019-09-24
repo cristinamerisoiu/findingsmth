@@ -5,7 +5,15 @@ export const filter = [
   },
   {
     name: "category",
-    options: ["salads", "healthy", "bio", "seafood"]
+    options: [
+      "salads",
+      "healthy",
+      "bio",
+      "seafood",
+      "cheese",
+      "fruits",
+      "vegetables"
+    ]
   },
   {
     name: "rating",
